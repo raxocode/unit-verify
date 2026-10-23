@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "raxocode-unit-verify": {
+      "command": "node",
+      "args": ["/absolute/path/to/unit-verify/packages/mcp/dist/index.js"]
+    }
+  }
+}

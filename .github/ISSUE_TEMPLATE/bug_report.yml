@@ -1,0 +1,38 @@
+name: Bug Report
+description: Create a report to help us fix a bug
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for reporting an issue! Please provide reproduction steps.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: What version of unit-verify are you running?
+      placeholder: v0.1.0
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction Steps
+      description: What exact input, CLI command, or code caused the issue?
+      placeholder: |
+        unit-verify convert --value 10 --from m --to km
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened? (Output, error code, etc.)
+    validations:
+      required: true

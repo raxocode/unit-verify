@@ -1,0 +1,26 @@
+{
+  "name": "unit-verify-workspace",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Offline unit conversion and verification engine with streaming batch and local MCP tools",
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "build": "npm run --workspaces build",
+    "typecheck": "npm run --workspaces typecheck",
+    "lint": "npm run --workspaces lint",
+    "test": "npm run --workspaces test",
+    "test:integration": "node --test packages/engine/test/cli.test.mjs packages/mcp/test/mcp.test.mjs",
+    "stress:batch": "node scripts/batch-load-test.mjs",
+    "package:smoke": "node scripts/check-package.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "typescript": "^5.8.2"
+  }
+}

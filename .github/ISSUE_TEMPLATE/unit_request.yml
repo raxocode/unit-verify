@@ -1,0 +1,42 @@
+name: Unit Request
+description: Propose adding a new unit to the catalogue
+labels: ["enhancement", "unit-catalog"]
+body:
+  - type: markdown
+    attributes:
+      value: Requests for new units must include authoritative citations (e.g. NIST, BIPM, ISO) and explicit ambiguity considerations.
+  - type: input
+    id: unit-name
+    attributes:
+      label: Unit Name and Canonical ID
+      placeholder: nautical_mile (nmi)
+    validations:
+      required: true
+  - type: input
+    id: dimension
+    attributes:
+      label: Physical Dimension
+      placeholder: length
+    validations:
+      required: true
+  - type: textarea
+    id: scale-factor
+    attributes:
+      label: Conversion Factor to SI Base Unit
+      placeholder: 1852 m (exact definition per NIST SP 811)
+    validations:
+      required: true
+  - type: textarea
+    id: citation
+    attributes:
+      label: Authoritative Citation / Reference
+      placeholder: https://www.nist.gov/pml/special-publication-811/...
+    validations:
+      required: true
+  - type: textarea
+    id: ambiguity
+    attributes:
+      label: Ambiguity Analysis
+      placeholder: Are there US/UK, historic, or competing definitions for this name?
+    validations:
+      required: true

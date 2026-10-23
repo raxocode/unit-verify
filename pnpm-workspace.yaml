@@ -1,0 +1,4 @@
+packages:
+  - 'packages/*'
+minimumReleaseAgeExclude:
+  - '@modelcontextprotocol/sdk@1.32.2'

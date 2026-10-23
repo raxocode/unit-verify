@@ -1,0 +1,54 @@
+{
+  "name": "@raxocode/unit-verify",
+  "version": "0.1.0",
+  "description": "Deterministic, offline-first unit conversion and verification engine with bounded streaming batch",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "unit-verify": "./bin/unit-verify.mjs"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "lint": "node --check bin/unit-verify.mjs",
+    "test": "node --test test/**/*.test.mjs"
+  },
+  "keywords": [
+    "units",
+    "unit-conversion",
+    "metrology",
+    "measurement",
+    "verification",
+    "cli",
+    "streaming",
+    "offline-first"
+  ],
+  "author": "RaxoCode",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raxocode/unit-verify.git",
+    "directory": "packages/engine"
+  },
+  "bugs": {
+    "url": "https://github.com/raxocode/unit-verify/issues"
+  },
+  "homepage": "https://github.com/raxocode/unit-verify#readme"
+}
