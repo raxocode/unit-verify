@@ -20,7 +20,7 @@
     "build": "tsc",
     "typecheck": "tsc --noEmit",
     "lint": "node --check dist/index.js",
-    "test": "node --test test/**/*.test.mjs"
+    "test": "node --test test/*.test.mjs"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.32.2",

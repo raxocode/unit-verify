@@ -28,7 +28,7 @@
     "build": "tsc",
     "typecheck": "tsc --noEmit",
     "lint": "node --check bin/unit-verify.mjs",
-    "test": "node --test test/**/*.test.mjs"
+    "test": "node --test test/*.test.mjs"
   },
   "keywords": [
     "units",
